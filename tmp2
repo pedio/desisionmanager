@@ -54,3 +54,43 @@ for line in sys.stdin:
 root = ET.fromstring(XMLSTR)
 container = root.find("kie-container")
 print container.get("status")
+
+
+readServerList.py
+
+#!/usr/bin/python
+import xml.etree.ElementTree as ET
+import sys
+
+XMLSTR=""
+
+#tree = ET.parse("test.xml")
+for line in sys.stdin:
+    XMLSTR += line
+tree = ET.fromstring(XMLSTR)
+serverinstances = tree.findall("server-instances")
+for serverinstance in serverinstances:
+    url = serverinstance.find("server-url")
+    print url.text
+
+
+ readpom.py
+
+#!/usr/bin/python
+import xml.etree.ElementTree as ET
+import sys
+
+XMLSTR=""
+
+#tree = ET.parse("test.xml")
+for line in sys.stdin:
+    XMLSTR += line
+tree = ET.fromstring(XMLSTR)
+for child in tree:
+   if child.tag.find("groupId") >= 0:
+     print "groupId="+child.text
+   if child.tag.find("artifactId") >= 0:
+     print "artifactId="+child.text
+   if child.tag.find("version") >= 0:
+     print "version="+child.text
+     
