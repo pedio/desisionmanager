@@ -1,0 +1,13 @@
+[Unit]
+Description=JBoss EAP systemctl service
+After=network.service
+
+[Service]
+Type=forking
+ExecStart=/data/jboss-ruleengine/jboss-eap-7.2/bin/init.d/jboss-eap.sh start
+ExecStop=/data/jboss-ruleengine/jboss-eap-7.2/bin/init.d/jboss-eap.sh stop
+ExecReload=/data/jboss-ruleengine/jboss-eap-7.2/bin/init.d/jboss-eap.sh restart
+PIDFile=/var/run/jboss-eap/jboss-eap.pid
+
+[Install]
+WantedBy=multi-user.target
