@@ -4,7 +4,7 @@
 REGIONIONAL_RULES_WORKBENCH=ssh://git@aiahk-stash.aia.biz:7999/rhdm
 REMOTEGIT=$1
 TARGETGIT=$REGIONIONAL_RULES_WORKBENCH/$REMOTEGIT.git
-GUVNORM2REPO=/data/jboss-ruleengine/jboss-eap-7.2/guvnor-m2repo/
+GUVNORM2REPO=/data/jboss-ruleengine/jboss-eap-7.2-uat/guvnor-m2repo/
 
 echo "Pull sources from remote Git $TARGETGIT"
 TMPTARGET="/tmp/$REMOTEGIT/$(date +%Y%m%d)"
@@ -31,9 +31,13 @@ echo $VERSION
 echo $GROUPPATH
 echo $TMPSTR
 
-mkdir -p $GUVNORM2REPO/$GROUPPATH/$NAMESPACE/$ARTIFACTID/$VERSION/
-cp $TMPTARGET/$REMOTEGIT/target/$ARTIFACTID-$VERSION.jar $GUVNORM2REPO/$GROUPPATH/$NAMESPACE/$ARTIFACTID/$VERSION/$ARTIFACTID-$VERSION-$TMPSTR.jar
-cp $TMPTARGET/$REMOTEGIT/pom.xml $GUVNORM2REPO/$GROUPPATH/$NAMESPACE/$ARTIFACTID/$VERSION/$ARTIFACTID-$VERSION-$TMPSTR.pom
+#echo "putting the binary into decision central"
+JARFILE=$TMPTARGET/$REMOTEGIT/target/$ARTIFACTID-$VERSION.jar
+mvn deploy:deploy-file -DgroupId=$GROUPID -DartifactId=$ARTIFACTID -Dversion=$VERSION -Dpackaging=jar -Dfile=$JARFILE -Durl=http://localhost:38280/decision-central/maven2  -DrepositoryId=guvnor-m2-repo-prd  -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true
+
+#mkdir -p $GUVNORM2REPO/$GROUPPATH/$NAMESPACE/$ARTIFACTID/$VERSION/
+#cp $TMPTARGET/$REMOTEGIT/target/$ARTIFACTID-$VERSION.jar $GUVNORM2REPO/$GROUPPATH/$NAMESPACE/$ARTIFACTID/$VERSION/$ARTIFACTID-$VERSION-$TMPSTR.jar
+#cp $TMPTARGET/$REMOTEGIT/pom.xml $GUVNORM2REPO/$GROUPPATH/$NAMESPACE/$ARTIFACTID/$VERSION/$ARTIFACTID-$VERSION-$TMPSTR.pom
 
 
 
