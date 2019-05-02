@@ -1,0 +1,15 @@
+    <system-properties>
+        <property name="org.kie.example" value="true"/>
+        <property name="org.jbpm.designer.perspective" value="ruleflow"/>
+        <property name="designerdataobjects" value="false"/>
+        <property name="org.jbpm.server.ext.disabled" value="true"/>
+        <property name="org.jbpm.ui.server.ext.disabled" value="true"/>
+        <property name="org.kie.server.location" value="http://HKEQXULBRM010:38080/kie-server/services/rest/server"/>
+        <property name="org.kie.server.controller" value="http://HKDCWTLBRM010:38180/decision-central/rest/controller"/>
+        <property name="org.kie.server.controller.user" value="controllerUser"/>
+        <property name="org.kie.server.controller.pwd" value="${VAULT::vaulted::controller.password::1}"/>
+        <property name="org.kie.server.user" value="controllerUser"/>
+        <property name="org.kie.server.pwd" value="${VAULT::vaulted::controller.password::1}"/>
+        <property name="org.kie.server.id" value="default-kieserver"/>
+    </system-properties>
+ 
