@@ -1,0 +1,21 @@
+    <system-properties>
+        <property name="org.kie.example" value="true"/>
+        <property name="org.jbpm.designer.perspective" value="ruleflow"/>
+        <property name="designerdataobjects" value="false"/>
+        <property name="org.jbpm.server.ext.disabled" value="true"/>
+        <property name="org.jbpm.ui.server.ext.disabled" value="true"/>
+        <property name="org.kie.workbench.profile" value="FORCE_PLANNER_AND_RULES"/>
+        <property name="org.kie.server.location" value="http://localhost:38080/kie-server/services/rest/server"/>
+        <property name="org.kie.server.controller" value="http://localhost:38080/decision-central/rest/controller"/>
+        <property name="org.kie.server.controller.user" value="controllerUser"/>
+        <property name="org.kie.server.controller.pwd" value="${VAULT::vaulted::controller.password::1}"/>
+        <property name="org.kie.server.user" value="controllerUser"/>
+        <property name="org.kie.server.pwd" value="${VAULT::vaulted::controller.password::1}"/>
+        <property name="org.kie.server.id" value="default-kieserver"/>
+        <property name="org.uberfire.ext.security.management.wildfly.cli.port" value="39990"/>
+        <property name="datasource.management.wildfly.port" value="39990"/>
+        <property name="org.guvnor.m2repo.dir" value="${jboss.home.dir}/guvnor-m2repo"/>
+        <property name="org.uberfire.nio.git.dir" value="${jboss.home.dir}/bin"/>
+        <property name="org.uberfire.metadata.index.dir" value="${jboss.home.dir}/bin"/>
+        <property name="kie.maven.offline.force" value="true"/>
+    </system-properties>
