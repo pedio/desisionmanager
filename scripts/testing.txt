@@ -1,0 +1,7 @@
+curl -s -H 'Content-Type: application/xml' -u 'rhdmAdmin:redh@T123'  hkdcwtlbrm010:38080/kie-server/services/rest/server/containers
+
+curl -s -H 'Content-Type: application/xml' -u 'rhdmAdmin:redh@T123'  HKEQXULBRM010:38080/kie-server/services/rest/server/containers
+curl -s -H 'Content-Type: application/xml' -u 'rhdmAdmin:redh@T123'  HKEQXULBRM020:38080/kie-server/services/rest/server/containers
+
+curl -s -H 'Content-Type: application/xml' -u 'rhdmAdmin:redh@T123'  HKEQXPLBRM010:38080/kie-server/services/rest/server/containers
+curl -s -H 'Content-Type: application/xml' -u 'rhdmAdmin:redh@T123'  HKEQXPLBRM020:38080/kie-server/services/rest/server/containers
