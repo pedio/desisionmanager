@@ -1,0 +1,74 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      https://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <localRepository>${user.home}/.m2/repository</localRepository>
+  <interactiveMode>true</interactiveMode>
+  <offline>false</offline>
+
+  <servers>
+    <server>
+      <id>guvnor-m2-repo-sit</id>
+      <username>rhdmAdmin</username>
+      <password>{oLMyvrM6XPAHRQvwlyONEB7p6iHpt8+PGWB9WKSSPak=}</password>
+      <configuration>
+        <wagonProvider>httpclient</wagonProvider>
+        <httpConfiguration>
+          <all>
+            <usePreemptive>true</usePreemptive>
+          </all>
+        </httpConfiguration>
+      </configuration>
+    </server>
+    <server>
+      <id>guvnor-m2-repo-uat</id>
+      <username>rhdmAdmin</username>
+      <password>{oLMyvrM6XPAHRQvwlyONEB7p6iHpt8+PGWB9WKSSPak=}</password>
+      <configuration>
+        <wagonProvider>httpclient</wagonProvider>
+        <httpConfiguration>
+          <all>
+            <usePreemptive>true</usePreemptive>
+          </all>
+        </httpConfiguration>
+      </configuration>
+    </server>
+    <server>
+      <id>guvnor-m2-repo-prd</id>
+      <username>rhdmAdmin</username>
+      <password>{oLMyvrM6XPAHRQvwlyONEB7p6iHpt8+PGWB9WKSSPak=}</password>
+      <configuration>
+        <wagonProvider>httpclient</wagonProvider>
+        <httpConfiguration>
+          <all>
+            <usePreemptive>true</usePreemptive>
+          </all>
+        </httpConfiguration>
+      </configuration>
+    </server>
+  </servers>
+
+  <profiles>
+    <profile>
+      <id>dmProfile</id>
+      <repositories>
+        <repository>
+          <id>guvnor-m2-repo-uat</id>
+          <url>http://HKDCWTLBRM010:38180/decision-central/maven2</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+
+  <activeProfiles>
+    <activeProfile>dmProfile</activeProfile>
+  </activeProfiles>
+
+</settings>
+
