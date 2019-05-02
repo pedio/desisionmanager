@@ -1,0 +1,24 @@
+ curl -s -H 'Content-Type: application/xml' -u 'rhdmAdmin:redh@T123'  localhost:38080/kie-server/services/rest/server/containers
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response type="SUCCESS" msg="List of created containers">
+    <kie-containers>
+        <kie-container container-alias="redhatdemo_1.0.1" container-id="redhatdemo_1.0.1" status="STARTED">
+            <messages>
+                <content>Container redhatdemo_1.0.1 successfully created with module mortgage-process:redhatdemo:1.0.1.</content>
+                <severity>INFO</severity>
+                <timestamp>2019-05-02T14:46:03.968+08:00</timestamp>
+            </messages>
+            <release-id>
+                <artifact-id>redhatdemo</artifact-id>
+                <group-id>mortgage-process</group-id>
+                <version>1.0.1</version>
+            </release-id>
+            <resolved-release-id>
+                <artifact-id>redhatdemo</artifact-id>
+                <group-id>mortgage-process</group-id>
+                <version>1.0.1</version>
+            </resolved-release-id>
+            <scanner status="DISPOSED"/>
+        </kie-container>
+    </kie-containers>
+</response>
