@@ -12,11 +12,6 @@
       <username>ruleengine</username>
       <password>{4Z+7CkWnz4sHFeAjMdzTbcFfezf8PxvrRb8cr10ztzo=}</password>
     </server>
-    <server>
-      <id>nexus-releases</id>
-      <username>ruleengine</username>
-      <password>{4Z+7CkWnz4sHFeAjMdzTbcFfezf8PxvrRb8cr10ztzo=}</password>
-    </server>
   </servers>
 
   <profiles>
@@ -26,7 +21,7 @@
         <repository>
           <id>nexus-snapshots</id>
           <name>AIAHK Snapshots Repo</name>
-          <url>https://hkgabpwapp24.aia.biz:9443/repository/ruleengine-snapshots/</url>
+          <url>http://hkgabpwapp24:9080/repository/ruleengine-snapshots/</url>
           <layout>default</layout>
           <releases>
             <enabled>true</enabled>
@@ -34,18 +29,6 @@
           <snapshots>
             <enabled>true</enabled>
             <updatePolicy>always</updatePolicy>
-          </snapshots>
-        </repository>
-        <repository>
-          <id>nexus-releases</id>
-          <name>AIAHK Internal Repo</name>
-          <url>https://hkgabpwapp24.aia.biz:9443/repository/ruleengine-releases/</url>
-          <layout>default</layout>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
           </snapshots>
         </repository>
       </repositories>
