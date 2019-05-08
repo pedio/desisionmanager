@@ -21,7 +21,7 @@
         <repository>
           <id>nexus-releases</id>
           <name>AIAHK Internal Repo</name>
-          <url>https://hkgabpwapp24.aia.biz:9443/repository/ruleengine-releases/</url>
+          <url>http://hkgabpwapp24:9080/repository/ruleengine-releases/</url>
           <layout>default</layout>
           <releases>
             <enabled>true</enabled>
