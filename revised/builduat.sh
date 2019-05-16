@@ -1,5 +1,5 @@
 #!/bin/bash
-! [ $# -eq 1 ] && echo "Usage: ./build.sh remotegit" && exit 1
+! [ $# -eq 1 ] && echo "Usage: ./builduat.sh remotegit" && exit 1
 
 REGIONIONAL_RULES_WORKBENCH=ssh://git@aiahk-stash.aia.biz:7999/rhdm
 REMOTEGIT=$1
