@@ -1,5 +1,5 @@
 #!/bin/bash
-! [ $# -eq 1 ] && echo "Usage: ./deploy.sh jarfile" && exit 1
+! [ $# -eq 1 ] && echo "Usage: ./deployuat1.sh jarfile" && exit 1
 ! [ -f $1 ] && echo "$1 file not found." && exit 1
 
 KIESERVER=http://HKEQXULBRM010:38080
